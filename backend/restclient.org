@@ -1,0 +1,622 @@
+#+title: Restclient
+#+PROPERTY: header-args:restclient :var api=""
+#+STARTUP: hideblocks
+#+STARTUP: overview
+
+* About
+
+** GET /about
+#+begin_src restclient :var sort=string :var pagination[withCount]=string :var pagination[page]=0 :var pagination[pageSize]=0 :var pagination[start]=0 :var pagination[limit]=0 :var fields=string :var populate=string :var filters=string :var locale=string
+GET http://localhost:1337/about?sort=:sort&pagination[withCount]=:pagination[withCount]&pagination[page]=:pagination[page]&pagination[pageSize]=:pagination[pageSize]&pagination[start]=:pagination[start]&pagination[limit]=:pagination[limit]&fields=:fields&populate=:populate&filters=:filters&locale=:locale
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** PUT /about
+#+begin_src restclient
+PUT http://localhost:1337/about
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** DELETE /about
+#+begin_src restclient
+DELETE http://localhost:1337/about
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+* Article
+
+** GET /articles
+#+begin_src restclient :var sort=string :var pagination[withCount]=string :var pagination[page]=0 :var pagination[pageSize]=0 :var pagination[start]=0 :var pagination[limit]=0 :var fields=string :var populate=string :var filters=string :var locale=string
+GET http://localhost:1337/articles?sort=:sort&pagination[withCount]=:pagination[withCount]&pagination[page]=:pagination[page]&pagination[pageSize]=:pagination[pageSize]&pagination[start]=:pagination[start]&pagination[limit]=:pagination[limit]&fields=:fields&populate=:populate&filters=:filters&locale=:locale
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** POST /articles
+#+begin_src restclient
+POST http://localhost:1337/articles
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /articles/{id}
+#+begin_src restclient :var id="0"
+GET http://localhost:1337/articles/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** PUT /articles/{id}
+#+begin_src restclient :var id="0"
+PUT http://localhost:1337/articles/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** DELETE /articles/{id}
+#+begin_src restclient :var id="0"
+DELETE http://localhost:1337/articles/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+* Author
+
+** GET /authors
+#+begin_src restclient :var sort=string :var pagination[withCount]=string :var pagination[page]=0 :var pagination[pageSize]=0 :var pagination[start]=0 :var pagination[limit]=0 :var fields=string :var populate=string :var filters=string :var locale=string
+GET http://localhost:1337/authors?sort=:sort&pagination[withCount]=:pagination[withCount]&pagination[page]=:pagination[page]&pagination[pageSize]=:pagination[pageSize]&pagination[start]=:pagination[start]&pagination[limit]=:pagination[limit]&fields=:fields&populate=:populate&filters=:filters&locale=:locale
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** POST /authors
+#+begin_src restclient
+POST http://localhost:1337/authors
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /authors/{id}
+#+begin_src restclient :var id="0"
+GET http://localhost:1337/authors/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** PUT /authors/{id}
+#+begin_src restclient :var id="0"
+PUT http://localhost:1337/authors/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** DELETE /authors/{id}
+#+begin_src restclient :var id="0"
+DELETE http://localhost:1337/authors/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+* Category
+
+** GET /categories
+#+begin_src restclient :var sort=string :var pagination[withCount]=string :var pagination[page]=0 :var pagination[pageSize]=0 :var pagination[start]=0 :var pagination[limit]=0 :var fields=string :var populate=string :var filters=string :var locale=string
+GET http://localhost:1337/categories?sort=:sort&pagination[withCount]=:pagination[withCount]&pagination[page]=:pagination[page]&pagination[pageSize]=:pagination[pageSize]&pagination[start]=:pagination[start]&pagination[limit]=:pagination[limit]&fields=:fields&populate=:populate&filters=:filters&locale=:locale
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** POST /categories
+#+begin_src restclient
+POST http://localhost:1337/categories
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /categories/{id}
+#+begin_src restclient :var id="0"
+GET http://localhost:1337/categories/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** PUT /categories/{id}
+#+begin_src restclient :var id="0"
+PUT http://localhost:1337/categories/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** DELETE /categories/{id}
+#+begin_src restclient :var id="0"
+DELETE http://localhost:1337/categories/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+* Global
+
+** GET /global
+#+begin_src restclient :var sort=string :var pagination[withCount]=string :var pagination[page]=0 :var pagination[pageSize]=0 :var pagination[start]=0 :var pagination[limit]=0 :var fields=string :var populate=string :var filters=string :var locale=string
+GET http://localhost:1337/global?sort=:sort&pagination[withCount]=:pagination[withCount]&pagination[page]=:pagination[page]&pagination[pageSize]=:pagination[pageSize]&pagination[start]=:pagination[start]&pagination[limit]=:pagination[limit]&fields=:fields&populate=:populate&filters=:filters&locale=:locale
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** PUT /global
+#+begin_src restclient
+PUT http://localhost:1337/global
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** DELETE /global
+#+begin_src restclient
+DELETE http://localhost:1337/global
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+* Upload - File
+
+** POST /upload
+#+begin_src restclient
+POST http://localhost:1337/upload
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** POST /upload?id={id}
+#+begin_src restclient :var id=string
+POST http://localhost:1337/upload?id={id}?id=:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /upload/files
+#+begin_src restclient
+GET http://localhost:1337/upload/files
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /upload/files/{id}
+#+begin_src restclient :var id="string"
+GET http://localhost:1337/upload/files/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** DELETE /upload/files/{id}
+#+begin_src restclient :var id="string"
+DELETE http://localhost:1337/upload/files/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+* Users-Permissions - Auth
+
+** GET /connect/{provider}
+Login with a provider
+
+#+begin_src restclient :var provider=".*"
+GET http://localhost:1337/connect/:provider
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** POST /auth/local
+Local login
+
+#+begin_src restclient
+POST http://localhost:1337/auth/local
+Content-Type: application/json
+Authorization: Bearer :bearer
+
+{
+  "identifier": "foobar",
+  "password": "Test1234"
+}
+#+end_src
+
+** POST /auth/local/register
+Register a user
+
+#+begin_src restclient
+POST http://localhost:1337/auth/local/register
+Content-Type: application/json
+Authorization: Bearer :bearer
+
+{
+  "username": "foobar",
+  "email": "foo.bar@strapi.io",
+  "password": "Test1234"
+}
+#+end_src
+
+** GET /auth/{provider}/callback
+Default Callback from provider auth
+
+#+begin_src restclient :var provider="string"
+GET http://localhost:1337/auth/:provider/callback
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** POST /auth/forgot-password
+Send rest password email
+
+#+begin_src restclient
+POST http://localhost:1337/auth/forgot-password
+Content-Type: application/json
+Authorization: Bearer :bearer
+
+{
+  "email": "foo.bar@strapi.io"
+}
+#+end_src
+
+** POST /auth/reset-password
+Rest user password
+
+#+begin_src restclient
+POST http://localhost:1337/auth/reset-password
+Content-Type: application/json
+Authorization: Bearer :bearer
+
+{
+  "password": "Test1234",
+  "passwordConfirmation": "Test1234",
+  "code": "zertyoaizndoianzodianzdonaizdoinaozdnia"
+}
+#+end_src
+
+** POST /auth/change-password
+Update user's own password
+
+#+begin_src restclient
+POST http://localhost:1337/auth/change-password
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /auth/email-confirmation
+Confirm user email
+
+#+begin_src restclient :var confirmation=string
+GET http://localhost:1337/auth/email-confirmation?confirmation=:confirmation
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** POST /auth/send-email-confirmation
+Send confirmation email
+
+#+begin_src restclient
+POST http://localhost:1337/auth/send-email-confirmation
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+* Users-Permissions - Users & Roles
+
+** GET /users-permissions/permissions
+Get default generated permissions
+
+#+begin_src restclient
+GET http://localhost:1337/users-permissions/permissions
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "permissions": {
+    "api::content-type.content-type": {
+      "controllers": {
+        "controllerA": {
+          "find": {
+            "enabled": false,
+            "policy": ""
+          },
+          "findOne": {
+            "enabled": false,
+            "policy": ""
+          },
+          "create": {
+            "enabled": false,
+            "policy": ""
+          }
+        },
+        "controllerB": {
+          "find": {
+            "enabled": false,
+            "policy": ""
+          },
+          "findOne": {
+            "enabled": false,
+            "policy": ""
+          },
+          "create": {
+            "enabled": false,
+            "policy": ""
+          }
+        }
+      }
+    }
+  }
+}
+#+end_example
+
+** GET /users-permissions/roles
+List roles
+
+#+begin_src restclient
+GET http://localhost:1337/users-permissions/roles
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "roles": [
+    {
+      "id": 1,
+      "name": "Public",
+      "description": "Default role given to unauthenticated user.",
+      "type": "public",
+      "createdAt": "2022-05-19T17:35:35.097Z",
+      "updatedAt": "2022-05-31T16:05:36.603Z",
+      "nb_users": 0
+    }
+  ]
+}
+#+end_example
+
+** POST /users-permissions/roles
+Create a role
+
+#+begin_src restclient
+POST http://localhost:1337/users-permissions/roles
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /users-permissions/roles/{id}
+Get a role
+
+#+begin_src restclient :var id="string"
+GET http://localhost:1337/users-permissions/roles/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "role": {
+    "id": 1,
+    "name": "Public",
+    "description": "Default role given to unauthenticated user.",
+    "type": "public",
+    "createdAt": "2022-05-19T17:35:35.097Z",
+    "updatedAt": "2022-05-31T16:05:36.603Z",
+    "permissions": {
+      "api::content-type.content-type": {
+        "controllers": {
+          "controllerA": {
+            "find": {
+              "enabled": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#+end_example
+
+** PUT /users-permissions/roles/{role}
+Update a role
+
+#+begin_src restclient :var role="string"
+PUT http://localhost:1337/users-permissions/roles/:role
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** DELETE /users-permissions/roles/{role}
+Delete a role
+
+#+begin_src restclient :var role="string"
+DELETE http://localhost:1337/users-permissions/roles/:role
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+** GET /users
+Get list of users
+
+#+begin_src restclient
+GET http://localhost:1337/users
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+[
+  {
+    "id": 9,
+    "username": "foao@strapi.io",
+    "email": "foao@strapi.io",
+    "provider": "local",
+    "confirmed": false,
+    "blocked": false,
+    "createdAt": "2022-06-01T18:32:35.211Z",
+    "updatedAt": "2022-06-01T18:32:35.217Z"
+  }
+]
+#+end_example
+
+** POST /users
+Create a user
+
+#+begin_src restclient
+POST http://localhost:1337/users
+Content-Type: application/json
+Authorization: Bearer :bearer
+
+{
+  "username": "foo",
+  "email": "foo@strapi.io",
+  "password": "foo-password"
+}
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "id": 1,
+  "username": "foo",
+  "email": "foo@strapi.io",
+  "provider": "local",
+  "confirmed": false,
+  "blocked": false,
+  "createdAt": "2022-05-19T17:35:35.096Z",
+  "updatedAt": "2022-05-19T17:35:35.096Z",
+  "role": {
+    "id": 1,
+    "name": "X",
+    "description": "Default role given to authenticated user.",
+    "type": "authenticated",
+    "createdAt": "2022-05-19T17:35:35.096Z",
+    "updatedAt": "2022-06-04T07:11:59.551Z"
+  }
+}
+#+end_example
+
+** GET /users/{id}
+Get a user
+
+#+begin_src restclient :var id="string"
+GET http://localhost:1337/users/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "id": 1,
+  "username": "foo",
+  "email": "foo@strapi.io",
+  "provider": "local",
+  "confirmed": false,
+  "blocked": false,
+  "createdAt": "2022-05-19T17:35:35.096Z",
+  "updatedAt": "2022-05-19T17:35:35.096Z"
+}
+#+end_example
+
+** PUT /users/{id}
+Update a user
+
+#+begin_src restclient :var id="string"
+PUT http://localhost:1337/users/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+
+{
+  "username": "foo",
+  "email": "foo@strapi.io",
+  "password": "foo-password"
+}
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "id": 1,
+  "username": "foo",
+  "email": "foo@strapi.io",
+  "provider": "local",
+  "confirmed": false,
+  "blocked": false,
+  "createdAt": "2022-05-19T17:35:35.096Z",
+  "updatedAt": "2022-05-19T17:35:35.096Z",
+  "role": {
+    "id": 1,
+    "name": "X",
+    "description": "Default role given to authenticated user.",
+    "type": "authenticated",
+    "createdAt": "2022-05-19T17:35:35.096Z",
+    "updatedAt": "2022-06-04T07:11:59.551Z"
+  }
+}
+#+end_example
+
+** DELETE /users/{id}
+Delete a user
+
+#+begin_src restclient :var id="string"
+DELETE http://localhost:1337/users/:id
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "id": 1,
+  "username": "foo",
+  "email": "foo@strapi.io",
+  "provider": "local",
+  "confirmed": false,
+  "blocked": false,
+  "createdAt": "2022-05-19T17:35:35.096Z",
+  "updatedAt": "2022-05-19T17:35:35.096Z"
+}
+#+end_example
+
+** GET /users/me
+Get authenticated user info
+
+#+begin_src restclient
+GET http://localhost:1337/users/me
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+{
+  "id": 1,
+  "username": "foo",
+  "email": "foo@strapi.io",
+  "provider": "local",
+  "confirmed": false,
+  "blocked": false,
+  "createdAt": "2022-05-19T17:35:35.096Z",
+  "updatedAt": "2022-05-19T17:35:35.096Z"
+}
+#+end_example
+
+** GET /users/count
+Get user count
+
+#+begin_src restclient
+GET http://localhost:1337/users/count
+Content-Type: application/json
+Authorization: Bearer :bearer
+#+end_src
+
+#+RESULTS:
+#+begin_example
+1
+#+end_example
