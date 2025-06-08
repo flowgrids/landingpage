@@ -2,7 +2,7 @@
 // @name         Export Swagger to org-mode restclient
 // @namespace    http://tampermonkey.net/
 // @version      2025-06-08
-// @description  Export Swagger API as org-mode restclient with examples, query params, response examples, grouped by tag
+// @description  Export Swagger API as org-mode restclient with examples and response examples, grouped by tag
 // @author       You
 // @match        *://*/documentation*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=undefined.localhost
@@ -38,41 +38,39 @@
     });
 
     btn.addEventListener("click", exportOrgFile);
-
     document.body.appendChild(btn);
   }
 
-  function formatPlaceholder(schema) {
-    if (!schema) return "<param>";
-    if (schema.type === "number" || schema.type === "integer") return "0";
-    if (schema.pattern) return schema.pattern;
-    if (schema.enum && schema.enum.length > 0) return schema.enum[0];
-    return "example" in schema ? schema.example : "string";
+  function formatDefault(param) {
+    if (param?.schema?.default !== undefined) return param.schema.default;
+    if (param?.default !== undefined) return param.default;
+    return param?.name || "<value>";
   }
 
-  function getExampleRequestBody(content) {
-    const json = content?.["application/json"];
-    if (json?.example) {
-      return JSON.stringify(json.example, null, 2);
-    }
-    if (json?.examples) {
-      const firstKey = Object.keys(json.examples)[0];
-      return JSON.stringify(json.examples[firstKey].value, null, 2);
-    }
-    return "";
-  }
+  function extractExampleBody(requestBody) {
+    if (!requestBody) return null;
+    const content = requestBody.content?.["application/json"];
+    if (!content) return null;
 
-  function getExampleResponseBody(responses) {
-    const keys = Object.keys(responses);
-    const key = keys.find((k) => k.startsWith("2")) || keys[0];
-    const content = responses[key]?.content?.["application/json"];
-    if (!content) return "";
     if (content.example) return JSON.stringify(content.example, null, 2);
     if (content.examples) {
-      const example = Object.values(content.examples)[0];
-      return JSON.stringify(example.value, null, 2);
+      const exampleKey = Object.keys(content.examples)[0];
+      return JSON.stringify(content.examples[exampleKey].value, null, 2);
     }
-    return "";
+    return null;
+  }
+
+  function extractResponseExample(responses) {
+    const response = responses["200"] || responses["201"];
+    const content = response?.content?.["application/json"];
+    if (!content) return null;
+
+    if (content.example) return JSON.stringify(content.example, null, 2);
+    if (content.examples) {
+      const exampleKey = Object.keys(content.examples)[0];
+      return JSON.stringify(content.examples[exampleKey].value, null, 2);
+    }
+    return null;
   }
 
   function exportOrgFile() {
@@ -91,66 +89,55 @@
           (details.tags && details.tags[0]) || path.split("/")[1] || "API";
         if (!grouped[tag]) grouped[tag] = [];
 
-        const fullPath = path;
+        const summary = details.summary;
+        const originalPath = path;
         let formattedPath = path;
         const vars = [];
-        const queryVars = [];
 
-        // Path variables
+        // Replace path parameters and collect defaults
         (details.parameters || []).forEach((param) => {
           if (param.in === "path") {
-            const name = param.name;
-            formattedPath = formattedPath.replace(`{${name}}`, `:${name}`);
-            vars.push(`${name}="${formatPlaceholder(param.schema)}"`);
-          }
-          if (param.in === "query") {
-            queryVars.push({
-              name: param.name,
-              placeholder: formatPlaceholder(param.schema),
-            });
-            vars.push(`${param.name}=${formatPlaceholder(param.schema)}`);
+            const val = formatDefault(param);
+            formattedPath = formattedPath.replace(
+              `{${param.name}}`,
+              `:${param.name}`,
+            );
+            vars.push(`${param.name}=${val}`);
           }
         });
 
-        if (queryVars.length > 0) {
-          const queryString = queryVars
-            .map((q) => `${q.name}=:${q.name}`)
-            .join("&");
-          formattedPath += `?${queryString}`;
-        }
+        // Request body
+        const requestBody = extractExampleBody(details.requestBody);
+        const hasBody = !!requestBody;
 
-        const headline = `** ${method.toUpperCase()} ${fullPath}`;
-        let block = "";
-        if (details.summary) {
-          block += `${details.summary}\n\n`;
-        }
+        // Response example
+        const responseExample = extractResponseExample(details.responses);
+
+        let block = `** ${method.toUpperCase()} ${originalPath}\n`;
+        if (summary) block += `${summary}\n\n`;
 
         const varLine = vars.length ? " :var " + vars.join(" :var ") : "";
         block += `#+begin_src restclient${varLine}\n`;
         block += `${method.toUpperCase()} ${baseUrl}${formattedPath}\n`;
-        block +=
-          "Content-Type: application/json\nAuthorization: Bearer :bearer\n";
+        block += `Content-Type: application/json\nAuthorization: Bearer :bearer\n`;
 
-        // Example request body
-        const body = getExampleRequestBody(details.requestBody?.content);
-        if (body) block += `\n${body}\n`;
-
-        block += "#+end_src\n";
-
-        // Example response
-        const responseExample = getExampleResponseBody(details.responses);
-        if (responseExample) {
-          block += `\n#+RESULTS:\n#+begin_example\n${responseExample}\n#+end_example\n`;
+        if (hasBody) {
+          block += `\n${requestBody}\n`;
         }
 
-        grouped[tag].push(`${headline}\n${block}`);
+        block += `#+end_src\n`;
+
+        if (responseExample) {
+          block += `\n#+begin_src json :exports code :results silent\n${responseExample}\n#+end_src\n`;
+        }
+
+        grouped[tag].push(block);
       }
     }
 
-    let content =
-      '#+title: Restclient\n#+PROPERTY: header-args:restclient :var api=""\n#+STARTUP: hideblocks\n#+STARTUP: overview\n\n';
-    content =
-      content +
+    const metadata = `# -*- eval: (progn (setenv "NODE_PATH" "./node_modules")); -*-\n#+TITLE: Restclient\n#+PROPERTY: header-args:restclient :var bearer="YOUR-BEARER-TOKEN"\n#+STARTUP: hideblocks\n#+STARTUP: overview\n\n`;
+    const content =
+      metadata +
       Object.entries(grouped)
         .map(([tag, blocks]) => {
           return `* ${tag}\n\n${blocks.join("\n")}`;
@@ -162,7 +149,7 @@
 
     const a = document.createElement("a");
     a.href = url;
-    a.download = "restclient.org";
+    a.download = "restclient.example.org";
     a.style.display = "none";
     document.body.appendChild(a);
     a.click();
@@ -170,6 +157,7 @@
     URL.revokeObjectURL(url);
   }
 
+  // Wait until Swagger UI loads
   const waitForSwagger = setInterval(() => {
     if (typeof ui !== "undefined" && ui.getConfigs && ui.getConfigs().spec) {
       clearInterval(waitForSwagger);
