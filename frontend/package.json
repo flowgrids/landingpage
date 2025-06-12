@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@ark-ui/react": "^5.13.0",
+    "motion": "^12.17.0",
     "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -28,6 +29,7 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "typescript-eslint-language-service": "^5.0.5",
-    "typescript-language-server": "^4.3.4"
+    "typescript-language-server": "^4.3.4",
+    "vscode-langservers-extracted": "^4.10.0"
   }
 }
