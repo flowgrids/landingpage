@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 type Heading = {
   id: string;
@@ -15,6 +16,7 @@ export default function OnThisPage() {
   const [activeId, setActiveId] = useState<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
+  const pathname = usePathname(); // Reload after navigation
 
   useEffect(() => {
     const headingElements = Array.from(document.querySelectorAll("h2, h3"));
@@ -26,10 +28,8 @@ export default function OnThisPage() {
       ref: { current: el as HTMLElement },
     }));
 
-    console.log("Extracted headings:", extracted);
-
     setHeadings(extracted);
-  }, []);
+  }, [pathname]);
 
   useMotionValueEvent(scrollY, "change", () => {
     const scrollPosition = window.scrollY + 100; // adjust for header offset
@@ -54,7 +54,7 @@ export default function OnThisPage() {
 
   return (
     <aside
-      className="hb-sidebar-container shrink-0 print:hidden order:last hidden xl:block sticky top-20 w-64 p-4 text-sm border-l border-gray-200"
+      className="hidden xl:block w-64 p-4 text-sm border-l border-gray-200 print:hidden"
       ref={containerRef}
     >
       <p className="font-bold mb-2">On this page</p>

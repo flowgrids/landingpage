@@ -12,7 +12,7 @@ export default function HeroSection() {
           height={1001}
         />
       </div>
-      <div className="relative min-h-full flex items-center bg-white/80 backdrop-blur-sm">
+      <div className="relative min-h-full flex items-center bg-white/20 dark:bg-black/20 backdrop-blur-sm">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-32 sm:py-24 lg:py-64">
           <div className="max-w-2xl">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">

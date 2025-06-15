@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Exo, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/rsc/navbar";
-import Footer from "./components/rsc/footer";
+import Navbar from "./rsc/navbar";
+import Footer from "./rsc/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const exoSans = Exo({
+  variable: "--font-exo-sans",
   subsets: ["latin"],
 });
 
@@ -26,14 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${exoSans.variable} ${geistMono.variable} antialiased`}>
         <>
           {" "}
           <Navbar />
           {children}
-          <Footer className="bg-gray-100 text-center py-4" />
+          <div className="bg-gray-100 text-center py-4">
+            <Footer />
+          </div>
         </>
       </body>
     </html>

@@ -1,23 +1,15 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import LogoWithText from "./logo-with-text";
 
 export default function Navbar() {
   return (
     <header className="border-b">
-      <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-indigo-600 font-bold text-xl">
-          <Link href="/" target="_self" replace>
-            <Image
-              src="/flowgrids-logo.svg"
-              alt="Logo"
-              width="200"
-              height="200"
-              className="inline-block mr-2"
-            />
-          </Link>
-        </div>
+        <Link href="/" target="_self" replace>
+          <LogoWithText />
+        </Link>
 
         {/* Navigation */}
         <nav className="space-x-8 text-sm font-medium text-gray-700">

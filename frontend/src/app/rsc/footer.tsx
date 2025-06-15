@@ -13,13 +13,13 @@ export default function Footer() {
             href="/terms"
             className="hover:text-gray-800 transition-colors duration-200"
           >
-            Terms of Service
+            Impressum
           </Link>
           <Link
             href="/privacy"
             className="hover:text-gray-800 transition-colors duration-200"
           >
-            Privacy Policy
+            Datenschutzerklärung
           </Link>
         </div>
       </div>
