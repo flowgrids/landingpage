@@ -69,7 +69,7 @@ This sections details the structure relative to the [[file:frontend/][frontend]]
   - a =rsc= folder if the component is a server component
   - a =client= folder if the component is a client component
 
-***** Nested Components
+**** Nested Components
 
 - If components use other components they can import those from either:
   - below it's file tree
@@ -83,6 +83,10 @@ This sections details the structure relative to the [[file:frontend/][frontend]]
     - This is the case if: the component imports a child component that is not used elsewhere and is of the same type (server or client component)
       - the component imports a child component that is not used elsewhere and
       - the child component is of the same type (server or client component)
+
+*** Styling
+
+- Use [[https://tailwindcss.com/docs/styling-with-utility-classes][TailwindCSS]] for styling
 
 ** Backend
 :PROPERTIES:
