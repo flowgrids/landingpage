@@ -3,6 +3,8 @@
 import { useEffect, useState, useRef } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 type Heading = {
   id: string;
@@ -32,7 +34,7 @@ export default function OnThisPage() {
   }, [pathname]);
 
   useMotionValueEvent(scrollY, "change", () => {
-    const scrollPosition = window.scrollY + 100; // adjust for header offset
+    const scrollPosition = window.scrollY; // + HEADER_HEIGHT;
 
     if (headings && headings.length > 0) {
       for (let i = headings.length - 1; i >= 0; i--) {
@@ -45,32 +47,26 @@ export default function OnThisPage() {
     }
   });
 
-  const handleClick = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <aside
-      className="hidden xl:block w-64 p-4 text-sm border-l border-gray-200 print:hidden"
+      className="hidden xl:flex flex-col w-64 p-4 text-sm border-l border-gray-200 print:hidden"
       ref={containerRef}
     >
       <p className="font-bold mb-2">On this page</p>
-      <ul className="space-y-1">
+      <ul className="flex flex-col gap-4">
         {headings.map((heading) => (
           <li key={heading.id} className={`pl-${(heading.level - 2) * 4}`}>
-            <button
-              onClick={() => handleClick(heading.id)}
-              className={`text-left hover:underline ${
+            <Link
+              href={`#${heading.id}`}
+              className={cn(
+                "text-left hover:underline",
                 heading.id === activeId
                   ? "text-blue-700 font-semibold"
-                  : "text-blue-600"
-              }`}
+                  : "text-muted-foreground",
+              )}
             >
               {heading.text}
-            </button>
+            </Link>
           </li>
         ))}
       </ul>

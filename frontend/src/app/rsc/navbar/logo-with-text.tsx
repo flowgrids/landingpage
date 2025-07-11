@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-export default function LogoWithText() {
-  const size = 35;
+export default function LogoWithText({ size }: { size?: number }) {
   const ascentRatio = 0.8; // Ratio of the text ascent to the font size (font dependent)
 
   return (

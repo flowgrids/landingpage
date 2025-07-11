@@ -9,7 +9,10 @@ export default function LegalsLayout({
   return (
     <div className="flex items-start justify-between min-h-screen">
       <div className="flex-1"></div>
-      <div id="content" className="max-w-4xl mx-auto px-4 py-8 text-gray-800">
+      <div
+        id="content"
+        className="max-w-4xl mx-auto px-4 py-8 text-gray-800 dark:text-gray-200"
+      >
         {children}
       </div>
       <div className="flex-1 sticky top-20">

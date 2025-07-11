@@ -11,7 +11,7 @@ export default function PrivacyPage() {
       </h1>
       <div
         id="preamble"
-        className="flex justify-center text-sm text-gray-500 my-8 border-t pt-4"
+        className="flex justify-center text-sm my-8 border-t pt-4"
       >
         <p className="date">Created: 2025-06-11 Wed 14:06</p>
       </div>
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
         <div
           id="outline-container-beschreibung-und-umfang-der-datenverarbeitung-2"
-          className="pl-4 border-l-4 border-blue-300"
+          className="pl-4 border-l-4"
         >
           <h3
             id="beschreibung-und-umfang-der-datenverarbeitung-2"
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
 
         <div
           id="outline-container-beschreibung-und-umfang-der-datenverarbeitung-3"
-          className="pl-4 border-l-4 border-blue-300"
+          className="pl-4 border-l-4"
         >
           <h3
             id="beschreibung-und-umfang-der-datenverarbeitung-3"
@@ -113,7 +113,7 @@ export default function PrivacyPage() {
 
         <div
           id="outline-container-rechtsgrundlage-für-die-datenverarbeitung-1"
-          className="pl-4 border-l-4 border-blue-300"
+          className="pl-4 border-l-4"
         >
           <h3
             id="rechtsgrundlage-für-die-datenverarbeitung-1"
@@ -130,7 +130,7 @@ export default function PrivacyPage() {
 
         <div
           id="outline-container-zweck-der-datenverarbeitung-3"
-          className="pl-4 border-l-4 border-blue-300"
+          className="pl-4 border-l-4"
         >
           <h3
             id="zweck-der-datenverarbeitung-3"
@@ -148,7 +148,7 @@ export default function PrivacyPage() {
 
         <div
           id="outline-container-dauer-der-speicherung-2"
-          className="pl-4 border-l-4 border-blue-300"
+          className="pl-4 border-l-4"
         >
           <h3
             id="dauer-der-speicherung-2"
@@ -166,10 +166,7 @@ export default function PrivacyPage() {
           </p>
         </div>
 
-        <div
-          id="outline-container-hinweis"
-          className="pl-4 border-l-4 border-blue-300"
-        >
+        <div id="outline-container-hinweis" className="pl-4 border-l-4">
           <h3 id="hinweis" className="text-xl font-semibold mt-4 mb-2">
             Hinweis
           </h3>
@@ -217,7 +214,7 @@ export default function PrivacyPage() {
           </p>
           <p>
             Es erfolgt kein Tracking und wir haben auf diese Daten keinen
-            direkten Zugriff.{" "}
+            direkten Zugriff.
           </p>
           <p>
             Wir setzen für die Zurverfügungstellung unserer Website folgenden
