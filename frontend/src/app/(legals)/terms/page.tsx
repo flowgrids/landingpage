@@ -3,9 +3,6 @@ import React from "react";
 export default function TermsPage() {
   return (
     <div>
-      <h1 id="impressum" className="text-4xl font-bold mb-4">
-        Impressum
-      </h1>
       <p>
         Hochschule für Technik, Wirtschaft und Gestaltung Konstanz / University
         of Applied Sciences Konstanz

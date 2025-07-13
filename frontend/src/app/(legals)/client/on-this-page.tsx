@@ -49,7 +49,8 @@ export default function OnThisPage() {
 
   return (
     <aside
-      className="hidden xl:flex flex-col w-64 p-4 text-sm border-l border-gray-200 print:hidden"
+      className="hidden xl:flex flex-col w-64 p-4 text-sm border-l print:hidden"
+      id="on-this-page"
       ref={containerRef}
     >
       <p className="font-bold mb-2">On this page</p>

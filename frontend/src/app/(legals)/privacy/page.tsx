@@ -3,19 +3,6 @@ import React from "react";
 export default function PrivacyPage() {
   return (
     <div>
-      <h1
-        id="datenschutzerklaerung-github-pages"
-        className="text-4xl font-bold mb-6 text-center"
-      >
-        Datenschutzerklärung
-      </h1>
-      <div
-        id="preamble"
-        className="flex justify-center text-sm my-8 border-t pt-4"
-      >
-        <p className="date">Created: 2025-06-11 Wed 14:06</p>
-      </div>
-
       <section
         id="outline-container-name-und-anschrift-des-verantwortlichen"
         className="mb-8"
