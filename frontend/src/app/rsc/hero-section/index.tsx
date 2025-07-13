@@ -18,13 +18,13 @@ export default function HeroSection() {
             </p>
             <div className="mt-8 flex gap-4 items-center">
               <Button asChild>
-                <Link href="#team">Learn more</Link>
+                <Link href="#team">Meet the Team</Link>
               </Button>
               <a
                 href="mailto:info@flowgrids.de"
                 className="inline-block text-sm font-semibold hover:underline"
               >
-                Contact us →
+                Contact Us →
               </a>
             </div>
           </div>

@@ -6,26 +6,26 @@ const teamMembers = [
     name: "Manuela Linke",
     role: "Projektleiterin",
     description: "Expertin für Projektmanagement und strategische Planung",
-    image: "/manuela-linke.jpg",
+    image: "/manu-bw.jpg",
   },
   {
     name: "Marcel Arpogaus",
     role: "Entwickler",
     description: "Spezialist für Backend-Entwicklung und Systemarchitektur",
-    image: "/marcel-arpogaus.jpg",
+    image: "/marcel-crop-bw.jpg",
   },
   {
     name: "Vincent Trötschel",
     role: "Fullstack-Entwickler",
     description: "Experte für moderne Web-Technologien und User Experience",
-    image: "/vincent-troetschel.jpg",
+    image: "/vince-crop-bw.jpg",
   },
   {
     name: "Marc Strobel",
     role: "Betriebswirt",
     description:
       "Spezialist für Gründungen und Betriebswirtschaftliches Consulting.",
-    image: "/vincent-troetschel.jpg",
+    image: "/marc-crop-bw.jpg",
   },
 ];
 
