@@ -44,7 +44,7 @@ export default function TeamSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-y-8 2xl:gap-x-64">
           {teamMembers.map((member, index) => (
             <CardContainer key={index} className="inter-var">
               <CardBody className="bg-popover relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[350px] h-auto rounded-xl p-6 border">
