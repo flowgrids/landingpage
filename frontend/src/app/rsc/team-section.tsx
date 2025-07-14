@@ -50,7 +50,7 @@ export default function TeamSection() {
               <CardBody className="bg-popover relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[350px] h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-primary"
+                  className="text-xl font-bold text-neutral-800 dark:text-white"
                 >
                   {member.name}
                 </CardItem>
