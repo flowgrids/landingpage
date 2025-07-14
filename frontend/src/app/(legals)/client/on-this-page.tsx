@@ -38,7 +38,7 @@ export default function OnThisPage() {
 
     if (headings && headings.length > 0) {
       for (let i = headings.length - 1; i >= 0; i--) {
-        const heading = headings[i].ref.current;
+        const heading = headings[i]?.ref.current;
         if (heading && heading.offsetTop <= scrollPosition) {
           setActiveId(heading.id);
           break;
