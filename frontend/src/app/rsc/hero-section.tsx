@@ -12,10 +12,10 @@ export default function HeroSection() {
               energy revolution
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt.
-              Intelligente Betriebsführung von Verteilnetzen
+              Stromnetze sind das schlagende Herz jeder Infrastruktur,
+              mit ihrer Leistungsfähigkeit steht und fällt die Energiewende.
+              Unsere Lösungen ergänzen das Herz um ein Hirn:
+              Mit intelligenter Betriebsführung von Verteilnetzen
               zur Beschleunigung der Energiewende.
             </p>
             <div className="mt-8 flex gap-4 items-center">
