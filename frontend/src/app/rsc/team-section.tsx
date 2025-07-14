@@ -4,27 +4,27 @@ import Image from "next/image";
 const teamMembers = [
   {
     name: "Manuela Linke",
-    role: "Projektleiterin",
-    description: "Expertin für Projektmanagement und strategische Planung",
+    role: "Forschung und Entwicklung",
+    description: "#ENERGY #AI #GRID-CONTROL",
     image: "/manu-bw.jpg",
   },
   {
     name: "Marcel Arpogaus",
-    role: "Entwickler",
-    description: "Spezialist für Backend-Entwicklung und Systemarchitektur",
+    role: "Technische Leitung",
+    description: "#ALGORITHMS #AI #FORECASTING",
     image: "/marcel-crop-bw.jpg",
   },
   {
     name: "Vincent Trötschel",
-    role: "Fullstack-Entwickler",
-    description: "Experte für moderne Web-Technologien und User Experience",
+    role: "Produktentwicklung",
+    description: "#CODING #SOFTWARE #ARCHITECTURE",
     image: "/vince-crop-bw.jpg",
   },
   {
     name: "Marc Strobel",
-    role: "Betriebswirt",
+    role: "Kaufmännische Leitung",
     description:
-      "Spezialist für Gründungen und Betriebswirtschaftliches Consulting.",
+      "#BUSINESS #SALES #NETWORKING",
     image: "/marc-crop-bw.jpg",
   },
 ];
@@ -50,7 +50,7 @@ export default function TeamSection() {
               <CardBody className="bg-popover relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[350px] h-auto rounded-xl p-6 border">
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                  className="text-xl font-bold text-primary"
                 >
                   {member.name}
                 </CardItem>
@@ -73,26 +73,10 @@ export default function TeamSection() {
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-4 dark:text-neutral-300"
+                  className="text-primary text-sm max-w-sm mt-4 dark:text-neutral-300"
                 >
                   {member.description}
                 </CardItem>
-                <div className="flex justify-between items-center mt-6">
-                  <CardItem
-                    translateZ={20}
-                    as="button"
-                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                  >
-                    Profil →
-                  </CardItem>
-                  <CardItem
-                    translateZ={20}
-                    as="button"
-                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                  >
-                    Kontakt
-                  </CardItem>
-                </div>
               </CardBody>
             </CardContainer>
           ))}
