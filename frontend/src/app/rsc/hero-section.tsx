@@ -15,6 +15,8 @@ export default function HeroSection() {
               Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
               lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
               fugiat aliqua. Anim aute id magna aliqua ad ad non deserunt sunt.
+              Intelligente Betriebsführung von Verteilnetzen
+              zur Beschleunigung der Energiewende.
             </p>
             <div className="mt-8 flex gap-4 items-center">
               <Button asChild>
