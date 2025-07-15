@@ -34,7 +34,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   return (
-    <div id="team" className="relative min-h-screen py-12 px-4%">
+    <div id="team" className="relative py-12 px-4%">
       <div className="absolute inset-0 bg-secondary mask-t-from-50 to-transparent z-0"></div>
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center">

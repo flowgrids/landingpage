@@ -5,6 +5,17 @@ import ThemeToggleGroup from "@/components/client/theme-toggle-group";
 import NavbarBorder from "./navbar-border";
 
 export default function Navbar({ height = "4rem" }: { height: string }) {
+  const menuItems = [
+    {
+      title: "Team",
+      href: "/#team",
+    },
+    {
+      title: "Partner",
+      href: "/#partner",
+    },
+  ];
+
   return (
     <header>
       <div
@@ -18,7 +29,11 @@ export default function Navbar({ height = "4rem" }: { height: string }) {
 
         {/* Navigation */}
         <nav className="space-x-8 text-sm font-medium text-gray-700 dark:text-gray-200">
-          <Link href="/#team">Team</Link>
+          {menuItems.map((item, index) => (
+            <Link key={index} href={item.href}>
+              {item.title}
+            </Link>
+          ))}
         </nav>
 
         {/* Contact us */}

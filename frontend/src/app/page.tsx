@@ -2,6 +2,7 @@ import HeroSection from "./rsc/hero-section";
 import TeamSection from "./rsc/team-section";
 import Image from "next/image";
 import flowgridsBG from "#/flowgrids-bg.svg";
+import PartnerSection from "./rsc/partner-section";
 
 export default function HomePage() {
   return (
@@ -20,6 +21,7 @@ export default function HomePage() {
       <div className="relative backdrop-blur-sm bg-white/20 dark:bg-black/20">
         <HeroSection />
         <TeamSection />
+        <PartnerSection />
       </div>
     </div>
   );
