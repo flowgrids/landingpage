@@ -9,7 +9,6 @@ import {
 import logoHTWG from "#/logo-htwg.svg";
 import logoInvestBW from "#/logo-investbw.png";
 import Image from "next/image";
-import Link from "next/link";
 
 const partners = [
   {
@@ -52,7 +51,12 @@ export default function PartnerSection() {
         <CarouselContent>
           {partners.map((partner, index) => (
             <CarouselItem key={index} className="basis-full lg:basis-1/2">
-              <Link href={partner.href} className="p-1">
+              <a
+                href={partner.href}
+                className="p-1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Card className="border-t">
                   <CardContent className="flex items-center justify-center p-6 aspect-16/9">
                     <Image
@@ -67,7 +71,7 @@ export default function PartnerSection() {
                 <div className="mt-2 text-center">
                   <span className="text-3xl font-semibold">{partner.name}</span>
                 </div>
-              </Link>
+              </a>
             </CarouselItem>
           ))}
         </CarouselContent>
