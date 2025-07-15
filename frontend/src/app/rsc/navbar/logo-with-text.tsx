@@ -1,4 +1,5 @@
 import Image from "next/image";
+import flowgridsIcon from "#/flowgrids-icon.svg";
 
 export default function LogoWithText({ size = 30 }: { size?: number }) {
   const ascentRatio = 0.8; // Ratio of the text ascent to the font size (font dependent)
@@ -13,7 +14,7 @@ export default function LogoWithText({ size = 30 }: { size?: number }) {
       }}
     >
       <Image
-        src="/flowgrids-icon.svg"
+        src={flowgridsIcon}
         alt="Flowgrids logo"
         width={size}
         height={size}

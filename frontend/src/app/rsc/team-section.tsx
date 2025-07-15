@@ -1,31 +1,34 @@
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Image from "next/image";
+import ManuBW from "#/manu-bw.jpg";
+import MarcelCropBW from "#/marcel-crop-bw.jpg";
+import MarcCropBW from "#/marc-crop-bw.jpg";
+import VinceCropBW from "#/vince-crop-bw.jpg";
 
 const teamMembers = [
   {
     name: "Manuela Linke",
     role: "Forschung und Entwicklung",
     description: "#ENERGY #AI #GRID-CONTROL",
-    image: "/manu-bw.jpg",
+    image: ManuBW,
   },
   {
     name: "Marcel Arpogaus",
     role: "Technische Leitung",
     description: "#ALGORITHMS #AI #FORECASTING",
-    image: "/marcel-crop-bw.jpg",
+    image: MarcelCropBW,
   },
   {
     name: "Vincent Trötschel",
     role: "Produktentwicklung",
     description: "#CODING #SOFTWARE #ARCHITECTURE",
-    image: "/vince-crop-bw.jpg",
+    image: VinceCropBW,
   },
   {
     name: "Marc Strobel",
     role: "Kaufmännische Leitung",
-    description:
-      "#BUSINESS #SALES #NETWORKING",
-    image: "/marc-crop-bw.jpg",
+    description: "#BUSINESS #SALES #NETWORKING",
+    image: MarcCropBW,
   },
 ];
 
