@@ -37,14 +37,8 @@ export default function Navbar({ height = "4rem" }: { height: string }) {
         </nav>
 
         {/* Contact us */}
-        <div>
+        <div className="hidden md:block">
           <ThemeToggleGroup />
-          {/* <Link
-              href="mailto:info@flowgrids.de"
-              className="text-sm font-medium text-gray-900 hover:underline"
-              >
-              Contact us →
-              </Link> */}
         </div>
         <NavbarBorder />
       </div>
