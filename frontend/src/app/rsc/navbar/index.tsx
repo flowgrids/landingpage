@@ -3,19 +3,10 @@ import Link from "next/link";
 import LogoWithText from "./logo-with-text";
 import ThemeToggleGroup from "@/components/client/theme-toggle-group";
 import NavbarBorder from "./navbar-border";
+import MobileMenu from "./client/mobile-menu";
+import navigationMenuItems from "@/app/navigation-menu-items";
 
 export default function Navbar({ height = "4rem" }: { height: string }) {
-  const menuItems = [
-    {
-      title: "Team",
-      href: "/#team",
-    },
-    {
-      title: "Partner",
-      href: "/#partner",
-    },
-  ];
-
   return (
     <header>
       <div
@@ -28,18 +19,25 @@ export default function Navbar({ height = "4rem" }: { height: string }) {
         </Link>
 
         {/* Navigation */}
-        <nav className="space-x-8 text-sm font-medium text-gray-700 dark:text-gray-200">
-          {menuItems.map((item, index) => (
+        <nav className="hidden md:block space-x-8 text-sm font-medium text-gray-700 dark:text-gray-200">
+          {navigationMenuItems.map((item, index) => (
             <Link key={index} href={item.href}>
               {item.title}
             </Link>
           ))}
         </nav>
 
-        {/* Contact us */}
+        {/* Theming */}
         <div className="hidden md:block">
           <ThemeToggleGroup />
         </div>
+
+        {/* Mobile Menu */}
+        <div className="block md:hidden">
+          <MobileMenu />
+        </div>
+
+        {/* Dynamic Border */}
         <NavbarBorder />
       </div>
     </header>
