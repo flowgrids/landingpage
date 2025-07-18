@@ -15,6 +15,7 @@ export default function HomePage() {
           className="w-auto h-full object-cover"
           width={1043}
           height={1001}
+          priority={true}
         />
       </div>
 
