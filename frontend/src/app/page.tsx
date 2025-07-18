@@ -6,15 +6,15 @@ import PartnerSection from "./rsc/partner-section";
 
 export default function HomePage() {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       {/* Background Image */}
-      <div className="absolute right-0 -z-10">
+      <div className="absolute -z-10 h-screen w-full">
         <Image
           src={flowgridsBG}
-          alt="Background"
-          className="w-auto h-full object-cover"
-          width={1043}
-          height={1001}
+          alt="Background Pattern"
+          className="object-cover md:object-contain md:object-right"
+          fill
+          sizes="100vw"
           priority={true}
         />
       </div>
