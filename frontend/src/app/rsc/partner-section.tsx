@@ -9,6 +9,7 @@ import {
 import logoHTWG from "#/logo-htwg.svg";
 import logoInvestBW from "#/logo-investbw.png";
 import Image from "next/image";
+import SectionLayout from "./section-layout";
 
 const partners = [
   {
@@ -27,18 +28,12 @@ const partners = [
 
 export default function PartnerSection() {
   return (
-    <div id="partner" className="relative w-full">
+    <SectionLayout
+      id="partner"
+      title="Unsere Partner"
+      text="Wir danken den Förderträger deren Unterstützung unsere Arbeit ermöglichen."
+    >
       <div className="absolute inset-0 bg-secondary -z-5"></div>
-
-      <div className="flex justify-center">
-        <div className="mb-12 max-w-2xl">
-          <h1 className="text-4xl font-bold mb-4">Unsere Partner</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Wir danken den Förderträger deren Unterstützung unsere Arbeit
-            ermöglichen.
-          </p>
-        </div>
-      </div>
 
       <Carousel
         opts={{
@@ -78,6 +73,6 @@ export default function PartnerSection() {
         <CarouselPrevious className="block lg:hidden" />
         <CarouselNext className="block lg:hidden" />
       </Carousel>
-    </div>
+    </SectionLayout>
   );
 }
