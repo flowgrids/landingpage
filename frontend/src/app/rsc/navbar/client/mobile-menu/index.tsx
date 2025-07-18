@@ -18,6 +18,20 @@ import { Menu } from "lucide-react";
 export default function MobileMenu() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const closeDrawer = () => setIsDrawerOpen(false);
+
+  const ariaSafeFragmentRouting = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    const href = e.currentTarget.getAttribute("href")!; // cache as `closeDrawer` will release `e`
+
+    closeDrawer();
+
+    requestAnimationFrame(() => {
+      const target = document.querySelector(href);
+      target?.scrollIntoView({ behavior: "smooth" });
+    });
+  };
+
   return (
     <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
       <DrawerTrigger asChild>
@@ -60,7 +74,11 @@ export default function MobileMenu() {
                 {navigationMenuItems.map((navItem, index) => (
                   <AccordionItem key={index} value="item-link">
                     <NonCollapsible>
-                      <Link href={navItem.href} onClick={closeDrawer}>
+                      <Link
+                        href={navItem.href}
+                        onClick={ariaSafeFragmentRouting}
+                        className="w-full"
+                      >
                         {navItem.title}
                       </Link>
                     </NonCollapsible>
