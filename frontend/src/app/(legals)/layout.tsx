@@ -28,7 +28,7 @@ export default function LegalsLayout({
           </div>
 
           {/* Sidebar with sticky positioning */}
-          <div className="w-64 pl-8">
+          <div className="hidden md:block w-64 pl-8">
             <div className="sticky top-20">
               <OnThisPage />
             </div>
