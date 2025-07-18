@@ -1,11 +1,11 @@
 const navigationMenuItems = [
     {
         title: "Team",
-        href: "/#team",
+        href: "#team",
     },
     {
         title: "Partner",
-        href: "/#partner",
+        href: "#partner",
     },
 ];
 
