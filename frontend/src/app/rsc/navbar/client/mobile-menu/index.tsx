@@ -5,6 +5,7 @@ import {
   Drawer,
   DrawerContent,
   DrawerTitle,
+  DrawerDescription,
 } from "@/components/ui/drawer";
 import { Accordion, AccordionItem } from "@/components/ui/accordion";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -24,6 +25,12 @@ export default function MobileMenu() {
           variant="ghost"
           size="icon"
           className="rounded-full text-muted-foreground"
+          onClick={(e) => {
+            // Remove focus from button.
+            // shadcn applies aria-hidden to everything outside the drawer, including this button.
+            // WAI-ARIA doesn't allow focused elements with aria-hidden.
+            e.currentTarget.blur();
+          }}
         >
           <Menu className="h-[1rem] w-[1rem]" />
         </Button>
@@ -34,6 +41,7 @@ export default function MobileMenu() {
           {/* Theming */}
           <VisuallyHidden>
             <DrawerTitle>Change Theme</DrawerTitle>
+            <DrawerDescription>Select a visual theme</DrawerDescription>
           </VisuallyHidden>
           <div className="w-full flex justify-center">
             <ThemeToggleGroup />
@@ -42,6 +50,9 @@ export default function MobileMenu() {
           {/* Navigation */}
           <VisuallyHidden>
             <DrawerTitle>Navigation</DrawerTitle>
+            <DrawerDescription>
+              Select a target to navigate to
+            </DrawerDescription>
           </VisuallyHidden>
           <nav className="mx-auto w-full max-w-sm">
             <div className="px-2">
