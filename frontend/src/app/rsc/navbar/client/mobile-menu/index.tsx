@@ -1,7 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import {
-  DrawerTrigger,
   Drawer,
   DrawerContent,
   DrawerTitle,
@@ -18,37 +17,32 @@ import { Menu } from "lucide-react";
 export default function MobileMenu() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const closeDrawer = () => setIsDrawerOpen(false);
+  const openDrawer = () => setIsDrawerOpen(true);
 
-  const ariaSafeFragmentRouting = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-
-    const href = e.currentTarget.getAttribute("href")!; // cache as `closeDrawer` will release `e`
-
-    closeDrawer();
-
-    requestAnimationFrame(() => {
-      const target = document.querySelector(href);
-      target?.scrollIntoView({ behavior: "smooth" });
-    });
+  const openDrawerTrigger = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // shadcn applies aria-hidden to everything outside the drawer, including this button.
+    // WAI-ARIA doesn't allow focused elements with aria-hidden.
+    // Remove focus from button:
+    e.currentTarget.blur();
+    // Don't use <DrawerTrigger> because of jumping bug:
+    // https://github.com/shadcn-ui/ui/issues/2272#issuecomment-2390734536
+    openDrawer();
   };
 
   return (
-    <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-      <DrawerTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="rounded-full text-muted-foreground"
-          onClick={(e) => {
-            // Remove focus from button.
-            // shadcn applies aria-hidden to everything outside the drawer, including this button.
-            // WAI-ARIA doesn't allow focused elements with aria-hidden.
-            e.currentTarget.blur();
-          }}
-        >
-          <Menu className="h-[1rem] w-[1rem]" />
-        </Button>
-      </DrawerTrigger>
+    <Drawer
+      open={isDrawerOpen}
+      onOpenChange={setIsDrawerOpen}
+      preventScrollRestoration={true}
+    >
+      <Button
+        variant="ghost"
+        size="icon"
+        className="rounded-full text-muted-foreground"
+        onClick={openDrawerTrigger}
+      >
+        <Menu className="h-[1rem] w-[1rem]" />
+      </Button>
 
       <DrawerContent>
         <div>
@@ -76,8 +70,8 @@ export default function MobileMenu() {
                     <NonCollapsible>
                       <Link
                         href={navItem.href}
-                        onClick={ariaSafeFragmentRouting}
                         className="w-full"
+                        onClick={closeDrawer}
                       >
                         {navItem.title}
                       </Link>
