@@ -1,18 +1,11 @@
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Image from "next/image";
-import ManuBW from "#/manu-bw.jpg";
 import MarcelCropBW from "#/marcel-crop-bw.jpg";
 import MarcCropBW from "#/marc-crop-bw.jpg";
 import VinceCropBW from "#/vince-crop-bw.jpg";
 import SectionLayout from "./section-layout";
 
 const teamMembers = [
-  {
-    name: "Manuela Linke",
-    role: "Forschung und Entwicklung",
-    description: "#ENERGY #AI #GRID-CONTROL",
-    image: ManuBW,
-  },
   {
     name: "Marcel Arpogaus",
     role: "Technische Leitung",
@@ -41,7 +34,7 @@ export default function TeamSection() {
       text="Lernen Sie die talentierten Menschen kennen, die hinter unserem Projekt stehen."
     >
       <div className="absolute inset-0 bg-secondary mask-t-from-50 to-transparent z-0"></div>
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-y-8 2xl:gap-x-64">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 lg:gap-x-64">
         {teamMembers.map((member, index) => (
           <CardContainer key={index} className="inter-var">
             <CardBody className="bg-popover relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[350px] h-auto rounded-xl p-6 border">
@@ -61,9 +54,7 @@ export default function TeamSection() {
               <CardItem translateZ="100" className="w-full mt-4">
                 <Image
                   src={member.image}
-                  height="300"
-                  width="300"
-                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl aspect-300/240"
                   alt={`Foto von ${member.name}`}
                 />
               </CardItem>

@@ -56,8 +56,6 @@ export default function PartnerSection() {
                   <CardContent className="flex items-center justify-center p-6 aspect-16/9">
                     <Image
                       src={partner.logo}
-                      width={1819}
-                      height={614}
                       alt="logo of the partner"
                       className="filter dark:invert"
                     />
