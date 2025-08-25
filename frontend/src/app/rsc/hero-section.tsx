@@ -14,10 +14,16 @@ export default function HeroSection() {
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Energienetze sind Dreh- und Angelpunkt der Energiewende. Das
               Potential durch innovative Technologien ist enorm und kaum
-              erschlossen. Unsere KI-basierten Anwendungen schließen Datenlücken
-              im Verteilnetzen und machen Unsicherheiten beherrschbar, sowohl in
-              der Netzplanung und Betriebsführung, ohne dabei
-              Nutzerfreundlichkeit zu opfern.
+              erschlossen. Unsere{" "}
+              <span className="px-1 rounded-md bg-primary/15 text-primary font-medium">
+                KI-basierten
+              </span>{" "}
+              Anwendungen schließen Datenlücken im Verteilnetzen und machen
+              Unsicherheiten beherrschbar, in Netzplanung und Betriebsführung,{" "}
+              <span className="px-1 rounded-md bg-primary/15 text-primary font-medium">
+                nutzerfreundlich
+              </span>{" "}
+              und einfach zu integrieren.
             </p>
             <div className="mt-8 flex gap-4 items-center">
               <Button asChild>
