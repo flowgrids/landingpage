@@ -18,7 +18,7 @@ export default function HeroSection() {
               <span className="px-1 rounded-md bg-primary/15 text-primary font-medium">
                 KI-basierten
               </span>{" "}
-              Anwendungen schließen Datenlücken im Verteilnetzen und machen
+              Anwendungen schließen Datenlücken in Verteilnetzen und machen
               Unsicherheiten beherrschbar, in Netzplanung und Betriebsführung,{" "}
               <span className="px-1 rounded-md bg-primary/15 text-primary font-medium">
                 nutzerfreundlich
