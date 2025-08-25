@@ -7,16 +7,17 @@ export default function HeroSection() {
       <div className="min-h-screen flex items-center">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 py-32 sm:py-24 lg:py-64">
           <div className="max-w-2xl pb-50">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              Using AI to power the <br />
-              energy revolution
+            <h1 className="text-4xl font-bold tracking-tight sm:text-4xl">
+              Intelligente Energienetze <br />
+              für eine nachhaltige Zukunft
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Stromnetze sind das schlagende Herz jeder Infrastruktur,
-              mit ihrer Leistungsfähigkeit steht und fällt die Energiewende.
-              Unsere Lösungen ergänzen das Herz um ein Hirn:
-              Mit intelligenter Betriebsführung von Verteilnetzen
-              zur Beschleunigung der Energiewende.
+              Energienetze sind Dreh- und Angelpunkt der Energiewende. Das
+              Potential durch innovative Technologien ist enorm und kaum
+              erschlossen. Unsere KI-basierten Anwendungen schließen Datenlücken
+              im Verteilnetzen und machen Unsicherheiten beherrschbar, sowohl in
+              der Netzplanung und Betriebsführung, ohne dabei
+              Nutzerfreundlichkeit zu opfern.
             </p>
             <div className="mt-8 flex gap-4 items-center">
               <Button asChild>
