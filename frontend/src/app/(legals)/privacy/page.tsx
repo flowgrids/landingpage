@@ -21,8 +21,11 @@ export default function PrivacyPage() {
           </p>
           <p className="italic space-y-1">
             <span>Hochschule Konstanz</span>
+            <br />
             <span>Alfred-Wachtel-Str. 8, 78462 Konstanz, Deutschland</span>
+            <br />
             <span>Tel.: 07531 206 0</span>
+            <br />
             <span>E-Mail: info@flowgrids.de</span>
           </p>
         </div>
@@ -219,7 +222,7 @@ export default function PrivacyPage() {
           </p>
           <p>
             Weitere Informationen zu Widerspruchs- und Beseitigungsmöglichkeiten
-            gegenüber GitHub finden Sie unter:
+            gegenüber GitHub finden Sie unter:{" "}
             <a
               href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages"
               className="text-blue-600 hover:underline"
@@ -248,7 +251,7 @@ export default function PrivacyPage() {
             Aktivitäten, bei denen GitHub personenbezogene Daten von natürlichen
             Personen in der EU verarbeitet. Diese Maßnahmen basieren auf den
             EU-Standardvertragsklauseln (SCCs). Weitere Informationen finden Sie
-            unter:
+            unter:{" "}
           </p>
           <a
             href="https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-data-protection-addendum#attachment-1–the-standard-contractual-clauses-processors"
@@ -305,7 +308,7 @@ export default function PrivacyPage() {
           </li>
           <li>
             Die zuständige Aufsichtsbehörde ist der Landesbeauftragte für den
-            Datenschutz und die Informationsfreiheit Baden-Württemberg:
+            Datenschutz und die Informationsfreiheit Baden-Württemberg:{" "}
             <a
               href="https://www.baden-wuerttemberg.datenschutz.de/"
               className="text-blue-600 hover:underline"
