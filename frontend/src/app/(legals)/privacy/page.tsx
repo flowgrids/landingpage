@@ -28,155 +28,155 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <section id="outline-container-formulare" className="mb-8">
-        <h2 id="formulare" className="text-2xl font-semibold mb-2">
+      {/* <section id="outline-container-formulare" className="mb-8">
+          <h2 id="formulare" className="text-2xl font-semibold mb-2">
           Formulare
-        </h2>
+          </h2>
 
-        <div
+          <div
           id="outline-container-beschreibung-und-umfang-der-datenverarbeitung-2"
           className="pl-4 border-l-4"
-        >
-          <h3
-            id="beschreibung-und-umfang-der-datenverarbeitung-2"
-            className="text-xl font-semibold mt-4 mb-2"
           >
-            Beschreibung und Umfang der Datenverarbeitung
+          <h3
+          id="beschreibung-und-umfang-der-datenverarbeitung-2"
+          className="text-xl font-semibold mt-4 mb-2"
+          >
+          Beschreibung und Umfang der Datenverarbeitung
           </h3>
           <p className="mb-2">
-            Auf unserer Internetseite sind für verschiedene Verarbeitungen
-            Formulare enthalten. Nimmt eine Nutzerin/ein Nutzer diese
-            Möglichkeit wahr, so werden über die in den Abschnitten III. (und
-            ggf. IV.) genannten Daten hinaus personenbezogene Daten verarbeitet.
-            Das Gleiche gilt, wenn alternativ zum Webformular personenbezogene
-            Daten an die auf der jeweiligen Internetseite dafür bereitgestellte
-            E-Mail-Adresse übermittelt werden.
+          Auf unserer Internetseite sind für verschiedene Verarbeitungen
+          Formulare enthalten. Nimmt eine Nutzerin/ein Nutzer diese
+          Möglichkeit wahr, so werden über die in den Abschnitten III. (und
+          ggf. IV.) genannten Daten hinaus personenbezogene Daten verarbeitet.
+          Das Gleiche gilt, wenn alternativ zum Webformular personenbezogene
+          Daten an die auf der jeweiligen Internetseite dafür bereitgestellte
+          E-Mail-Adresse übermittelt werden.
           </p>
           <p className="mb-2">
-            Rechtsgrundlage für die Verarbeitung der Daten ist in der Regel Art.
-            6 Abs. 1 lit. e) DSGVO. Ist eine abweichende Rechtsgrundlage
-            einschlägig, werden Sie, ebenso wie über den Zweck der Verarbeitung
-            sowie über die Löschfristen, direkt auf den Formularseiten
-            informiert.
+          Rechtsgrundlage für die Verarbeitung der Daten ist in der Regel Art.
+          6 Abs. 1 lit. e) DSGVO. Ist eine abweichende Rechtsgrundlage
+          einschlägig, werden Sie, ebenso wie über den Zweck der Verarbeitung
+          sowie über die Löschfristen, direkt auf den Formularseiten
+          informiert.
           </p>
           <p>
-            Gespeichert werden die Daten, die selbst eingegeben werden, sowie
-            Datum und Uhrzeit der Eingabe. Alternativ zur Speicherung ist ein
-            Versand über die bereitgestellte E-Mail-Adresse möglich. In diesem
-            Fall werden die mit der E-Mail übermittelten personenbezogenen Daten
-            der Nutzerin/des Nutzers gespeichert.
+          Gespeichert werden die Daten, die selbst eingegeben werden, sowie
+          Datum und Uhrzeit der Eingabe. Alternativ zur Speicherung ist ein
+          Versand über die bereitgestellte E-Mail-Adresse möglich. In diesem
+          Fall werden die mit der E-Mail übermittelten personenbezogenen Daten
+          der Nutzerin/des Nutzers gespeichert.
           </p>
-        </div>
-      </section>
+          </div>
+          </section> */}
 
-      <section
-        id="outline-container-elektronische-post-e-mail"
-        className="mb-8"
-      >
-        <h2
+      {/* <section
+          id="outline-container-elektronische-post-e-mail"
+          className="mb-8"
+          >
+          <h2
           id="elektronische-post-e-mail"
           className="text-2xl font-semibold mb-2"
-        >
+          >
           Elektronische Post (E-Mail)
-        </h2>
+          </h2>
 
-        <div
+          <div
           id="outline-container-beschreibung-und-umfang-der-datenverarbeitung-3"
           className="pl-4 border-l-4"
-        >
-          <h3
-            id="beschreibung-und-umfang-der-datenverarbeitung-3"
-            className="text-xl font-semibold mt-4 mb-2"
           >
-            Beschreibung und Umfang der Datenverarbeitung
+          <h3
+          id="beschreibung-und-umfang-der-datenverarbeitung-3"
+          className="text-xl font-semibold mt-4 mb-2"
+          >
+          Beschreibung und Umfang der Datenverarbeitung
           </h3>
           <p>
-            Wenn Sie uns E-Mails senden, werden Ihre mit der E-Mail
-            übermittelten personenbezogenen Daten verarbeitet und gespeichert.
-            Wir gehen davon aus, dass Sie mit der Kommunikation auf diesem Wege
-            einverstanden sind und diese so stattfinden kann.
+          Wenn Sie uns E-Mails senden, werden Ihre mit der E-Mail
+          übermittelten personenbezogenen Daten verarbeitet und gespeichert.
+          Wir gehen davon aus, dass Sie mit der Kommunikation auf diesem Wege
+          einverstanden sind und diese so stattfinden kann.
           </p>
-        </div>
+          </div>
 
-        <div
+          <div
           id="outline-container-rechtsgrundlage-für-die-datenverarbeitung-1"
           className="pl-4 border-l-4"
-        >
-          <h3
-            id="rechtsgrundlage-für-die-datenverarbeitung-1"
-            className="text-xl font-semibold mt-4 mb-2"
           >
-            Rechtsgrundlage für die Datenverarbeitung
+          <h3
+          id="rechtsgrundlage-für-die-datenverarbeitung-1"
+          className="text-xl font-semibold mt-4 mb-2"
+          >
+          Rechtsgrundlage für die Datenverarbeitung
           </h3>
           <p>
-            Rechtsgrundlage für die Datenverarbeitung Ihrer per E-Mail an uns
-            übermittelten personenbezogenen Daten ist Art. 6 Abs. 1 lit. e)
-            DSGVO.
+          Rechtsgrundlage für die Datenverarbeitung Ihrer per E-Mail an uns
+          übermittelten personenbezogenen Daten ist Art. 6 Abs. 1 lit. e)
+          DSGVO.
           </p>
-        </div>
+          </div>
 
-        <div
+          <div
           id="outline-container-zweck-der-datenverarbeitung-3"
           className="pl-4 border-l-4"
-        >
-          <h3
-            id="zweck-der-datenverarbeitung-3"
-            className="text-xl font-semibold mt-4 mb-2"
           >
-            Zweck der Datenverarbeitung
+          <h3
+          id="zweck-der-datenverarbeitung-3"
+          className="text-xl font-semibold mt-4 mb-2"
+          >
+          Zweck der Datenverarbeitung
           </h3>
           <p>
-            Wenn Sie uns eine E-Mail senden, so werden der Inhalt dieser E-Mail
-            und Ihre E-Mail-Adresse ausschließlich für die Korrespondenz mit
-            Ihnen und für die Verarbeitung der Konversation verwendet. Es
-            erfolgt in diesem Zusammenhang keine Weitergabe der Daten an Dritte.
+          Wenn Sie uns eine E-Mail senden, so werden der Inhalt dieser E-Mail
+          und Ihre E-Mail-Adresse ausschließlich für die Korrespondenz mit
+          Ihnen und für die Verarbeitung der Konversation verwendet. Es
+          erfolgt in diesem Zusammenhang keine Weitergabe der Daten an Dritte.
           </p>
-        </div>
+          </div>
 
-        <div
+          <div
           id="outline-container-dauer-der-speicherung-2"
           className="pl-4 border-l-4"
-        >
-          <h3
-            id="dauer-der-speicherung-2"
-            className="text-xl font-semibold mt-4 mb-2"
           >
-            Dauer der Speicherung
+          <h3
+          id="dauer-der-speicherung-2"
+          className="text-xl font-semibold mt-4 mb-2"
+          >
+          Dauer der Speicherung
           </h3>
           <p>
-            Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes
-            ihrer Erhebung nicht mehr erforderlich sind. Für personenbezogenen
-            Daten, die per E-Mail übersandt wurden, ist dies dann der Fall, wenn
-            die jeweilige Konversation mit dem Nutzer beendet ist. Beendet ist
-            die Konversation dann, wenn sich aus den Umständen entnehmen lässt,
-            dass der betroffene Sachverhalt abschließend geklärt ist.
+          Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes
+          ihrer Erhebung nicht mehr erforderlich sind. Für personenbezogenen
+          Daten, die per E-Mail übersandt wurden, ist dies dann der Fall, wenn
+          die jeweilige Konversation mit dem Nutzer beendet ist. Beendet ist
+          die Konversation dann, wenn sich aus den Umständen entnehmen lässt,
+          dass der betroffene Sachverhalt abschließend geklärt ist.
           </p>
-        </div>
+          </div>
 
-        <div id="outline-container-hinweis" className="pl-4 border-l-4">
+          <div id="outline-container-hinweis" className="pl-4 border-l-4">
           <h3 id="hinweis" className="text-xl font-semibold mt-4 mb-2">
-            Hinweis
+          Hinweis
           </h3>
           <p>
-            Informationen, die Sie unverschlüsselt per E-Mail an uns senden,
-            können möglicherweise auf dem Übertragungsweg von Dritten gelesen
-            werden. Wir können in der Regel auch Ihre Identität nicht überprüfen
-            und wissen nicht, wer sich hinter einer E-Mail-Adresse verbirgt.
-            Eine rechtssichere Kommunikation durch einfache E-Mail-Schreiben ist
-            daher nicht gewährleistet. Wir setzen - wie viele E-Mail-Anbieter -
-            Filter gegen unerwünschte Werbung („SPAM-Filter“) ein, die in
-            seltenen Fällen auch normale E-Mails fälschlicherweise automatisch
-            als unerwünschte Werbung einordnen und löschen. E-Mails, die
-            schädigende Programme („Viren“) enthalten, werden von uns
-            automatisch abgewiesen oder gelöscht, soweit diese von unseren
-            technischen Einrichtungen erkannt werden. Wenn Sie schutzwürdige
-            Nachrichten an uns senden wollen, empfehlen wir dringend, diese zu
-            verschlüsseln und zu signieren, um eine unbefugte Kenntnisnahme und
-            Verfälschung auf dem Übertragungsweg zu verhindern oder die
-            Nachricht auf konventionellem Postweg an uns zu senden.
+          Informationen, die Sie unverschlüsselt per E-Mail an uns senden,
+          können möglicherweise auf dem Übertragungsweg von Dritten gelesen
+          werden. Wir können in der Regel auch Ihre Identität nicht überprüfen
+          und wissen nicht, wer sich hinter einer E-Mail-Adresse verbirgt.
+          Eine rechtssichere Kommunikation durch einfache E-Mail-Schreiben ist
+          daher nicht gewährleistet. Wir setzen - wie viele E-Mail-Anbieter -
+          Filter gegen unerwünschte Werbung („SPAM-Filter“) ein, die in
+          seltenen Fällen auch normale E-Mails fälschlicherweise automatisch
+          als unerwünschte Werbung einordnen und löschen. E-Mails, die
+          schädigende Programme („Viren“) enthalten, werden von uns
+          automatisch abgewiesen oder gelöscht, soweit diese von unseren
+          technischen Einrichtungen erkannt werden. Wenn Sie schutzwürdige
+          Nachrichten an uns senden wollen, empfehlen wir dringend, diese zu
+          verschlüsseln und zu signieren, um eine unbefugte Kenntnisnahme und
+          Verfälschung auf dem Übertragungsweg zu verhindern oder die
+          Nachricht auf konventionellem Postweg an uns zu senden.
           </p>
-        </div>
-      </section>
+          </div>
+          </section> */}
 
       <section id="outline-container-orge50496e" className="mb-8">
         <h2 id="orge50496e" className="text-2xl font-semibold mb-2">
