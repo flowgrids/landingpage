@@ -19,7 +19,7 @@ const teamMembers = [
     role: "Produktentwicklung",
     description: "#CODING #SOFTWARE #ARCHITECTURE",
     image: VinceCropBW,
-    linkedin: "https://www.linkedin.com/in/vincent-tr%C3%B6tschel-766a3a370/",
+    linkedin: "https://www.linkedin.com/in/vincent-t-766a3a370/",
   },
   {
     name: "Marc Strobel",
