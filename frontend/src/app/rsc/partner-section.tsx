@@ -8,21 +8,25 @@ import {
 } from "@/components/ui/carousel";
 import logoHTWG from "#/logo-htwg.svg";
 import logoInvestBW from "#/logo-investbw.png";
+import logoAxel from "#/logo-axel.png";
 import Image from "next/image";
 import SectionLayout from "./section-layout";
 
 const partners = [
   {
     name: "HTWG Konstanz",
-    role: "Forschung und Entwicklung",
     href: "https://www.htwg-konstanz.de",
     logo: logoHTWG,
   },
   {
     name: "InvestBW",
-    role: "InnovationsförderungTechnische Leitung",
     href: "https://invest-bw.de/",
     logo: logoInvestBW,
+  },
+  {
+    name: "Axel Accelerator",
+    href: "https://www.axel.energy/de/index.php",
+    logo: logoAxel,
   },
 ];
 
@@ -31,7 +35,7 @@ export default function PartnerSection() {
     <SectionLayout
       id="partner"
       title="Unsere Partner"
-      text="Wir danken den Förderträger deren Unterstützung unsere Arbeit ermöglichen."
+      text="Wir danken den Partnern deren Unterstützung unsere Arbeit ermöglichen."
     >
       <div className="absolute inset-0 bg-secondary -z-5"></div>
 
@@ -41,11 +45,14 @@ export default function PartnerSection() {
           slidesToScroll: 1,
           loop: true,
         }}
-        className="max-w-1/2 xl:max-w-lg mx-auto"
+        className="max-w-1/2 lg:max-w-1/2 xl:max-w-full mx-auto"
       >
         <CarouselContent>
           {partners.map((partner, index) => (
-            <CarouselItem key={index} className="basis-full lg:basis-1/2">
+            <CarouselItem
+              key={index}
+              className="basis-full lg:basis-1/2 xl:basis-1/3"
+            >
               <a
                 href={partner.href}
                 className="p-1"
@@ -68,8 +75,8 @@ export default function PartnerSection() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="block lg:hidden" />
-        <CarouselNext className="block lg:hidden" />
+        <CarouselPrevious className="block xl:hidden" />
+        <CarouselNext className="block xl:hidden" />
       </Carousel>
     </SectionLayout>
   );
